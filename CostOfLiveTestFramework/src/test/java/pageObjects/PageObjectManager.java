@@ -6,6 +6,7 @@ public class PageObjectManager {
 	
 	public LandingPage landingPage;
 	public WebDriver driver;
+	public LoginPage loginPage;
 	
 	public PageObjectManager(WebDriver driver)
 	{
@@ -21,5 +22,9 @@ public class PageObjectManager {
 	 return landingPage;
 	}
 	
+	public LoginPage getLoginPage() {
+		loginPage = new LoginPage(driver);
+		return loginPage;
+	}
 	
 }

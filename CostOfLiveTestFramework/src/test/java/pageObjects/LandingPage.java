@@ -38,6 +38,8 @@ public class LandingPage {
 	By footerPopComp = By.cssSelector("section:nth-of-type(1) > ul:nth-of-type(2) > li:nth-of-type(2) > a");
 	By recAddedPrc = By.cssSelector("li:nth-of-type(2) > a > strong");
 	By twitterBtn = By.cssSelector(".twitter-button");
+	//this will replace
+	By userAvatar = By.cssSelector(".user-avatar");
 	
 	public void mainHeaderLogo() {
 		driver.findElement(mainHeaderLogo).click();
@@ -133,5 +135,14 @@ public class LandingPage {
 	public void twitterBtn() {
 		driver.findElement(twitterBtn).click();
 	}	
+	
+	public String getTitleLandingPage()
+	{
+		return driver.getTitle();
+	}
+	
+	public boolean userAvatar() {
+		return driver.findElement(userAvatar).isDisplayed();
+	}
 	
 }
